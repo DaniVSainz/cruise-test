@@ -8,42 +8,42 @@
 
     <div class="cruise-container">
       <div class="card-container">
-        <div class="card">
-          <div class="card-image">
-            <%= image_tag 'http://i.imgur.com/xCLiMOj.jpg'%>
+        <% @response.parsed_response['sailings'].each do |cruise| %>
+          <% picture = cruise['sailing_main_image'] %>
+          <div class="card">
+            <div class="card-image">
+              <%= image_tag picture, alt:'cruise picture!'%>
+            </div>
+            <div class="card-footer">
+              <p class="cruise-p">Cruise Line Name - Cruise Ship Name</p>
+              <h2>Cruise Sailing Title</h2>
+              <div class="cell">
+                <div class="check">
+                    <input id="check-1" type="checkbox" />
+                    <label for="check-1">$125</label>
+                    <div class="mask"></div>
+                </div>
+              </div>
+              <div class="cell">
+                <div class="check">
+                    <input id="check-1" type="checkbox" />
+                    <label for="check-1">$125</label>
+                    <div class="mask"></div>
+                </div>
+              </div>
+              <div class="cell">
+                <div class="check">
+                    <input id="check-1" type="checkbox" />
+                    <label for="check-1">$125</label>
+                    <div class="mask"></div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="card-footer">
-            <p class="cruise-p">Cruise Line Name - Cruise Ship Name</p>
-            <h2>Cruise Sailing Title</h2>
-            <div class="cell">
-              <div class="check">
-                  <input id="check-1" type="checkbox" />
-                  <label for="check-1">$125</label>
-                  <div class="mask"></div>
-              </div>
-            </div>
-            <div class="cell">
-              <div class="check">
-                  <input id="check-1" type="checkbox" />
-                  <label for="check-1">$125</label>
-                  <div class="mask"></div>
-              </div>
-            </div>
-            <div class="cell">
-              <div class="check">
-                  <input id="check-1" type="checkbox" />
-                  <label for="check-1">$125</label>
-                  <div class="mask"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-        </div>
-        <div class="card">
-        </div>
+        <% end %>
       </div>
     </div>
+
 
     <div class="savings-container">
       <div class="cruise-header">
@@ -51,8 +51,6 @@
       </div>
       <h1 id="price">$0</h1>
     </div>
-
-    <p><% @response.parsed_response %></p>
 </div>
 
 
