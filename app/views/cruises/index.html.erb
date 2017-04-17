@@ -1,8 +1,25 @@
 <div class="page-container">
-  <div class="cruise-container">
     <div class="header-content">
-      <h1 class="cruise-header">Choose Your Sailings</h1>
-      <p class="cruise-header" id='pick-one'>(Pick one for each box)</p>
+      <div class="cruise-header">
+        <h1 class="block">Choose Your Sailings</h1>
+        <h3 class="block" id="pick-one">(Pick one for each box)</p>
+      </div>
     </div>
-  </div>
+
+    <div class="cards-container">
+      <div class="card">
+      </div>
+      <div class="card">
+      </div>
+      <div class="card">
+      </div>
+    </div>
+
+    <div class="savings-container">
+      <div class="cruise-header">
+        <h1 id="savings-h1">Your Selected Savings Total</h1>
+      </div>
+    </div>
+
+    <p><% @response.parsed_response %></p>
 </div>
