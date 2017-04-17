@@ -99,3 +99,8 @@ h2{
   width: 100%;
   margin-left: 8%;
 }
+
+#price{
+  float: right;
+  background-color: #ff9900;
+}

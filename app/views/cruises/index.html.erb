@@ -15,8 +15,27 @@
           <div class="card-footer">
             <p class="cruise-p">Cruise Line Name - Cruise Ship Name</p>
             <h2>Cruise Sailing Title</h2>
-            <input id="check-1" type="checkbox" />
-            <label for="check-1">$125</label>
+            <div class="cell">
+              <div class="check">
+                  <input id="check-1" type="checkbox" />
+                  <label for="check-1">$125</label>
+                  <div class="mask"></div>
+              </div>
+            </div>
+            <div class="cell">
+              <div class="check">
+                  <input id="check-1" type="checkbox" />
+                  <label for="check-1">$125</label>
+                  <div class="mask"></div>
+              </div>
+            </div>
+            <div class="cell">
+              <div class="check">
+                  <input id="check-1" type="checkbox" />
+                  <label for="check-1">$125</label>
+                  <div class="mask"></div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="card">
@@ -30,7 +49,27 @@
       <div class="cruise-header">
         <h1 id="savings-h1">Your Selected Savings Total</h1>
       </div>
+      <h1 id="price">$0</h1>
     </div>
 
     <p><% @response.parsed_response %></p>
 </div>
+
+
+<script type="text/javascript">
+$(".cell").on("click", "input:checkbox", function () {
+  var $items = $(".cell").find("input:checkbox:checked");
+  var $total = $("#price");
+  var cur_total = 0;
+
+  $items.each(function () {
+      var $this = $(this);
+      var $target = $("label[for='" + $this.attr("id") + "']");
+      var item_value = +($target.html().replace("$", "") || 0);
+
+      cur_total += item_value;
+  });
+
+  $total.html("$" + cur_total);
+});
+</script>
