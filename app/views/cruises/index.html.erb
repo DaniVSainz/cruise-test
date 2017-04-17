@@ -6,6 +6,8 @@
       </div>
     </div>
 
+    <% cruiseLineInfo = @response.parsed_response['cruise_lines'] %>
+
     <div class="cruise-container">
       <div class="card-container">
         <% @response.parsed_response['sailings'].each do |cruise| %>
@@ -16,7 +18,7 @@
             </div>
             <div class="card-footer">
               <p class="cruise-p">Cruise Line Name - Cruise Ship Name</p>
-              <h2>Cruise Sailing Title</h2>
+              <h2><%= cruise['sailing_name'] %></h2>
               <div class="cell">
                 <div class="check">
                     <input id="check-1" type="checkbox" />
