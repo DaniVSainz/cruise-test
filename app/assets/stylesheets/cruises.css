@@ -47,12 +47,28 @@ h1 , p {
 
 /*Holds our cruise cards*/
 
-.cards-container {
+.cruise-container {
   flex-grow: 1;
   background-color: black;
   width: 92%;
   margin: 0 auto;
   border: 1px solid white;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+  background-color: white;
+}
+
+.card{
+  display: inline-block;
+  /*flex-grow: 1;*/
+  background-color: black;
+  width: 30%;
 }
 
 
