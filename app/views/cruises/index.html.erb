@@ -17,7 +17,13 @@
               <%= image_tag picture, alt:'cruise picture!'%>
             </div>
             <div class="card-footer">
-              <p class="cruise-p">Cruise Line Name - Cruise Ship Name</p>
+              <% cruiseLineInfo.each do |cruiseLines| %>
+                <% if cruiseLines['cruise_line_id'] == cruise['sailing_cruise_line_id'] %>
+                  <% @cruise_line_name = cruiseLines['cruise_line_name'] %>
+                  <% @cruise_ship_name = cruiseLines['cruise_ship_name'] %>
+                <% end %>
+              <% end %>
+              <p class="cruise-p"><%= @cruise_line_name %> - <%= @cruise_ship_name %> </p>
               <h2><%= cruise['sailing_name'] %></h2>
               <div class="cell">
                 <div class="check">
