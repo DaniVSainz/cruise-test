@@ -67,11 +67,18 @@ h1 , p {
 .card{
   display: inline-block;
   /*flex-grow: 1;*/
-  background-color: black;
-  width: 30%;
+  /*width: 33.33%;*/
+  border-right: 1px solid white;
 }
 
-
+h2{
+  margin: 0;
+}
+.card-footer{
+  padding-left: 13px;
+  height: 173px;
+  background-color: white;
+}
 /* Savings container */
 
 .savings-container {
