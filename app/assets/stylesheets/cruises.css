@@ -167,12 +167,17 @@ h2{
 }
 
 
+
 /*Mobile Layout*/
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
+  .page-container{
+    height:  auto;
+  }
+
   .header-content{
-    height: 5%;
+    height: 100px;
   }
 
   .cruise-header{
@@ -198,11 +203,25 @@ h2{
   .savings-container{
     background-color: white;
     width: 100%;
-    height: auto;
+    height: 100px;
   }
 
   .card{
     margin: 0;
     margin-bottom: 15px;
+  }
+
+
+  /*Footer*/
+
+  #savings-h1{
+    margin-left: 1%;
+    display: inline-block;
+  }
+
+  #price{
+    padding-left: 20px;
+    float: right;
+    background: linear-gradient(#ff9900 0%, #ff7600 100%);
   }
 }
