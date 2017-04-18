@@ -13,8 +13,20 @@
         <% @response.parsed_response['sailings'].each do |cruise| %>
           <% picture = cruise['sailing_main_image'] %>
           <div class="card">
-            <div class="card-image">
+            <div class="box">
               <%= image_tag picture, alt:'cruise picture!'%>
+              <% price = 1000000 %>
+              <% cruise['sailing_options'].each do |option| %>
+                <% if option['sailing_price'] <= price %>
+                  <% price = option['sailing_price'] %>
+                <% end %>
+              <% end %>
+              <div class="ribbon">
+                <div>
+                  <span class='starting'>Starting at</span><br>
+                  <span class='ribbon-price'>$<%= price %></span>
+                </div>
+              </div>
             </div>
             <div class="card-footer">
               <% cruiseLineInfo.each do |cruiseLines| %>
@@ -39,7 +51,6 @@
       </div>
     </div>
 
-
     <div class="savings-container">
       <div class="savings-content">
         <h1 id="savings-h1">Your Selected Savings Total</h1>
@@ -50,6 +61,19 @@
 
 
 <script type="text/javascript">
+function addCommas(nStr)
+{
+	nStr += '';
+	x = nStr.split('.');
+	x1 = x[0];
+	x2 = x.length > 1 ? '.' + x[1] : '';
+	var rgx = /(\d+)(\d{3})/;
+	while (rgx.test(x1)) {
+		x1 = x1.replace(rgx, '$1' + ',' + '$2');
+	}
+	return x1 + x2;
+}
+
 $(".cell").on("click", "input:checkbox", function () {
   var $items = $(".cell").find("input:checkbox:checked");
   var $total = $("#price");
@@ -63,6 +87,6 @@ $(".cell").on("click", "input:checkbox", function () {
       cur_total += item_value;
   });
 
-  $total.html("$" + cur_total);
+  $total.html("$" + addCommas(cur_total));
 });
 </script>
