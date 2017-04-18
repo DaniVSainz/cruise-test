@@ -181,18 +181,25 @@ h2{
   }
 
   .cruise-header{
+    width: 600px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    float: left;
-    text-align: inherit;
+    float: inherit;
+    text-align: inherit;;
   }
 
   #header-h1{
+    padding-right: 30px;
     font-size: 55px;
+    text-align: center;
   }
 
   #pick-one{
+    width: 50%;
     margin: 0;
+    padding-left: 10px;
+    float: left;
   }
 
 
