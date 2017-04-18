@@ -25,24 +25,14 @@
               <% end %>
               <p class="cruise-p"><%= @cruise_line_name %> - <%= @cruise_ship_name %> </p>
               <h2><%= cruise['sailing_name'] %></h2>
-              <div class="cell">
-                <div class="check">
-                    <input id="check-1" type="checkbox" />
-                    <label for="check-1">$125</label>
+              <% cruise['sailing_options'].each do |option| %>
+                <div class="cell">
+                  <div class="check">
+                      <input id="check-0" type="checkbox" />
+                      <label for="check-0"><span><%= option['sailing_date'] %></span><span class='price'><%= ' $' + (option['sailing_price']).to_s %></span></label>
+                  </div>
                 </div>
-              </div>
-              <div class="cell">
-                <div class="check">
-                    <input id="check-1" type="checkbox" />
-                    <label for="check-1">$125</label>
-                </div>
-              </div>
-              <div class="cell">
-                <div class="check">
-                    <input id="check-1" type="checkbox" />
-                    <label for="check-1">$125</label>
-                </div>
-              </div>
+              <% end %>
             </div>
           </div>
         <% end %>
@@ -67,7 +57,7 @@ $(".cell").on("click", "input:checkbox", function () {
 
   $items.each(function () {
       var $this = $(this);
-      var $target = $("label[for='" + $this.attr("id") + "']");
+      var $target = $(".price");
       var item_value = +($target.html().replace("$", "") || 0);
 
       cur_total += item_value;
