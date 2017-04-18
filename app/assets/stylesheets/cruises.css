@@ -179,6 +179,11 @@ h2{
     display: flex;
     flex-direction: column;
     float: left;
+    text-align: inherit;
+  }
+
+  #header-h1{
+    font-size: 30px;
   }
 
   #pick-one{
@@ -194,5 +199,10 @@ h2{
     background-color: white;
     width: 100%;
     height: auto;
+  }
+
+  .card{
+    margin: 0;
+    margin-bottom: 15px;
   }
 }
