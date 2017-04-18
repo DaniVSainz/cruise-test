@@ -220,6 +220,7 @@ h2{
   }
 
   #price{
+    height: 100%;
     padding-left: 20px;
     float: right;
     background: linear-gradient(#ff9900 0%, #ff7600 100%);
