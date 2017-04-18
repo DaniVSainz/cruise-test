@@ -196,8 +196,14 @@ h2{
   }
 
 
+  /*Cruise Cards*/
+
+  img{
+    width: 600px;
+  }
+
   .card-container{
-    width: 1%;
+    width: 100%;
     display: block;
   }
   .savings-container{
