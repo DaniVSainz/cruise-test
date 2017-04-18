@@ -167,8 +167,16 @@ h2{
 }
 
 
-
-/*Mobile Layout*/
+/*==================================================================================================================*/
+              /*Mobile Layout*//*Mobile Layout*//*Mobile Layout*//*Mobile Layout*//*Mobile Layout*/
+              /*Mobile Layout*//*Mobile Layout*//*Mobile Layout*//*Mobile Layout*//*Mobile Layout*/
+              /*Mobile Layout*//*Mobile Layout*//*Mobile Layout*//*Mobile Layout*//*Mobile Layout*/
+              /*Mobile Layout*//*Mobile Layout*//*Mobile Layout*//*Mobile Layout*//*Mobile Layout*/
+              /*Mobile Layout*//*Mobile Layout*//*Mobile Layout*//*Mobile Layout*//*Mobile Layout*/
+              /*Mobile Layout*//*Mobile Layout*//*Mobile Layout*//*Mobile Layout*//*Mobile Layout*/
+              /*Mobile Layout*//*Mobile Layout*//*Mobile Layout*//*Mobile Layout*//*Mobile Layout*/
+              /*Mobile Layout*//*Mobile Layout*//*Mobile Layout*//*Mobile Layout*//*Mobile Layout*/
+/*==================================================================================================================*/
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
@@ -261,4 +269,21 @@ h2{
     float: right;
     /*background: linear-gradient(#ff9900 0%, #ff7600 100%);*/
   }
+}
+
+/*==================================================================================================================*/
+        /*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*/
+        /*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*/
+        /*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*/
+        /*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*/
+        /*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*/
+        /*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*/
+/*==================================================================================================================*/
+
+@media only screen and (min-device-width : 481px) and (max-device-width :1024px) {
+
+  .card-container{
+    flex-direction: column;
+  }
+
 }
