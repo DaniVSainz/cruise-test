@@ -171,14 +171,20 @@ h2{
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
-  .cruise-header{
-    display: inline-block;
-    text-align: center;
+  .header-content{
+    height: 5%;
   }
 
-  .header-content{
-    height: auto;
+  .cruise-header{
+    display: flex;
+    flex-direction: column;
+    float: left;
   }
+
+  #pick-one{
+    margin: 0;
+  }
+
 
   .card-container{
     width: 1%;
