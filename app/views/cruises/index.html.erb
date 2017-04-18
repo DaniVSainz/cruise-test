@@ -40,7 +40,7 @@
               <% cruise['sailing_options'].each do |option| %>
                 <div class="cell">
                   <div class="check">
-                      <input id="check-0" type="checkbox" />
+                      <input class='checkbox-round' id="check-0" type="checkbox" />
                       <label for="check-0"><span><%= option['sailing_date'] %></span><span class='price'><%= ' $' + (option['sailing_price']).to_s %></span></label>
                   </div>
                 </div>
