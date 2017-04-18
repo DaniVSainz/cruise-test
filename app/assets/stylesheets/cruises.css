@@ -83,6 +83,13 @@ h2{
   background-color: white;
 }
 
+.price{
+  float: right;
+  color: #ff9900;
+  font-weight: bold;
+  margin-right: 8%;
+}
+
 .cruise-p{
   font-style: italic;
   color: #505050;
@@ -97,9 +104,15 @@ h2{
   height: 15.7%;
 }
 
+.savings-content{
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 #savings-h1{
-  width: 100%;
-  margin-left: 8%;
+  margin-left: 1%;
+  display: inline-block;
 }
 
 #price{
