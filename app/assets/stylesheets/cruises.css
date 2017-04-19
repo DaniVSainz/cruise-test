@@ -207,7 +207,7 @@ h2{
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
   .page-container{
-    height:  auto;
+    height:  100%;
   }
 
   .header-content{
@@ -325,6 +325,9 @@ h2{
   }
 }
 
+
+
+
 /*==================================================================================================================*/
         /*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*/
         /*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*//*Tablets*/
@@ -335,6 +338,9 @@ h2{
 /*==================================================================================================================*/
 
 @media only screen and (min-device-width : 481px) and (max-device-width :1024px) {
+  .page-container{
+    height: 100%;
+  }
 
   /*================================*/
   /*          Header               */
@@ -434,4 +440,11 @@ h2{
     float: right;
     background: linear-gradient(#ff9900 0%, #ff7600 100%);
   }
+}
+
+/* Media query for ipad pro height */
+@media screen and ( min-height: 1100px ){
+    .page-container{
+      height:100vh;
+    }
 }

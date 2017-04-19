@@ -81,7 +81,11 @@ if (screen.width > 480 && screen.width < 1025 ) {
    $('#ribbon1').appendTo('#footer1');
    $('#ribbon2').appendTo('#footer2');
    $('#ribbon3').appendTo('#footer3');
-}
+}else {
+  $('#ribbon1').appendTo('#box1');
+  $('#ribbon2').appendTo('#box2');
+  $('#ribbon3').appendTo('#box3');
+  }
 function addCommas(nStr)
 {
 	nStr += '';
