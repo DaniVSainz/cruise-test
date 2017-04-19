@@ -66,18 +66,15 @@
 
 <script type="text/javascript">
 $(window).resize(function() {
- if ($(window).width() < 1025 && $(window).width() > 480 ) {
+ if (screen.width > 480 && screen.width < 1025 ) {
    console.log('Test1')
   $('#ribbon1').appendTo('#footer1');
   $('#ribbon2').appendTo('#footer2');
   $('#ribbon3').appendTo('#footer3');
  }
-else {
-   alert('More than 960');
-}
 });
 
-if ($(window).width() < 1025 && $(window).width() > 480 ) {
+if (screen.width > 480 && screen.width < 1025 ) {
    console.log('Test2')
    $('#ribbon1').appendTo('#footer1');
    $('#ribbon2').appendTo('#footer2');
