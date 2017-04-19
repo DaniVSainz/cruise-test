@@ -64,6 +64,13 @@
 
 <script type="text/javascript">
 $(window).resize(function() {
+ if (screen.height < 480 && screen.width > 480 ){
+   $(".cruise-header").css({"padding-top":'95px'});
+ }else{
+   $(".cruise-header").css({"padding-top":'0px'});
+ }
+});
+$(window).resize(function() {
  if (screen.width > 480 && screen.width < 1025 ) {
    console.log('Test1')
   $('#ribbon1').appendTo('#footer1');
