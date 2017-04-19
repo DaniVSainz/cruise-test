@@ -10,29 +10,27 @@
 
     <div class="cruise-container">
       <div class="card-container">
-        <% ribbon_id= 0 %>
-        <% footer_id= 0 %>
+        <% id= 0 %>
         <% @response.parsed_response['sailings'].each do |cruise| %>
           <% picture = cruise['sailing_main_image'] %>
+          <% price = 1000000 %>
+          <% cruise['sailing_options'].each do |option| %>
+            <% if option['sailing_price'] <= price %>
+              <% price = option['sailing_price'] %>
+            <% end %>
+          <% end %>
+          <% id += 1 %>
           <div class="card">
-            <div class="box">
+            <div class="box" id='box<%= id %>'>
               <%= image_tag picture, alt:'cruise picture!'%>
-              <% price = 1000000 %>
-              <% cruise['sailing_options'].each do |option| %>
-                <% if option['sailing_price'] <= price %>
-                  <% price = option['sailing_price'] %>
-                <% end %>
-              <% end %>
-              <% ribbon_id += 1 %>
-              <% footer_id+= 0 %>
-              <div class="ribbon" id="ribbon<%= ribbon_id %>">
+              <div class="ribbon" id="ribbon<%= id %>">
                 <div>
                   <span class='starting'>Starting at</span><br>
                   <span class='ribbon-price'>$<%= price %></span>
                 </div>
               </div>
             </div>
-            <div class="card-footer" id="footer<%= ribbon_id %>">
+            <div class="card-footer" id="footer<%= id %>">
               <% cruiseLineInfo.each do |cruiseLines| %>
                 <% if cruiseLines['cruise_line_id'] == cruise['sailing_cruise_line_id'] %>
                   <% @cruise_line_name = cruiseLines['cruise_line_name'] %>
