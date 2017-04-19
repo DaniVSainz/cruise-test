@@ -10,6 +10,8 @@
 
     <div class="cruise-container">
       <div class="card-container">
+        <% ribbon_id= 0 %>
+        <% footer_id= 0 %>
         <% @response.parsed_response['sailings'].each do |cruise| %>
           <% picture = cruise['sailing_main_image'] %>
           <div class="card">
@@ -21,14 +23,16 @@
                   <% price = option['sailing_price'] %>
                 <% end %>
               <% end %>
-              <div class="ribbon">
+              <% ribbon_id += 1 %>
+              <% footer_id+= 0 %>
+              <div class="ribbon" id="ribbon<%= ribbon_id %>">
                 <div>
                   <span class='starting'>Starting at</span><br>
                   <span class='ribbon-price'>$<%= price %></span>
                 </div>
               </div>
             </div>
-            <div class="card-footer">
+            <div class="card-footer" id="footer<%= ribbon_id %>">
               <% cruiseLineInfo.each do |cruiseLines| %>
                 <% if cruiseLines['cruise_line_id'] == cruise['sailing_cruise_line_id'] %>
                   <% @cruise_line_name = cruiseLines['cruise_line_name'] %>
@@ -61,6 +65,15 @@
 
 
 <script type="text/javascript">
+// if($(window).width() > 481 && < 1025){
+//   //append to the p
+//   $('.ribbon').appendTo('.card-footer');
+// }
+if ($(window).width() < 1025) {
+   $('#ribbon1').appendTo('#footer1');
+   $('#ribbon2').appendTo('#footer2');
+   $('#ribbon3').appendTo('#footer3');
+}
 function addCommas(nStr)
 {
 	nStr += '';

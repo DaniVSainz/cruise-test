@@ -282,8 +282,61 @@ h2{
 
 @media only screen and (min-device-width : 481px) and (max-device-width :1024px) {
 
+  /*================================*/
+  /*          Header               */
+  /*===============================*/
+
+    .header-content{
+      height: 80px;
+    }
+
+  /*================================*/
+  /*          Cruise Cards*          /
+  /*===============================*/
+  .box{
+    background-color: transparent;
+  }
   .card-container{
     flex-direction: column;
   }
-
+  .cruise-p{
+    padding-top: 35px;
+    padding-bottom: 0px;
+  }
+  h2{
+    padding-bottom: 40px;
+    font-size: 35px;
+  }
+  .cell{
+    padding-bottom: 20px;
+  }
+  .price{
+    margin-right: 30%;
+  }
+  img{
+    width: 350px;
+    height: 330px;
+  }
+  .card{
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .card-footer{
+    padding-left: 30px;
+    height: 330px;
+    width: 100%;
+  }
+  .ribbon{
+    right: 55px;
+    top: inherit;
+  }
+  #ribbon1{
+    top: 83px;
+  }
+  #ribbon2{
+    top: 427px;
+  }
+  #ribbon3{
+    top:766px;
+  }
 }
