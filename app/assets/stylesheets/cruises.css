@@ -291,7 +291,7 @@ h2{
     }
 
   /*================================*/
-  /*          Cruise Cards*          /
+  /*          Cruise Cards*          */
   /*===============================*/
   .box{
     background-color: transparent;
@@ -321,6 +321,9 @@ h2{
     display: flex;
     margin-bottom: 20px;
   }
+  /*================================*/
+  /*         Footer and ribbon      */
+  /*===============================*/
   .card-footer{
     padding-left: 30px;
     height: 330px;
@@ -331,12 +334,47 @@ h2{
     top: inherit;
   }
   #ribbon1{
-    top: 83px;
+    top: 85px;
   }
   #ribbon2{
-    top: 427px;
+    top: 425px;
   }
   #ribbon3{
-    top:766px;
+    top:780px;
+  }
+
+  /*================================*/
+  /*          Bottom Savings        */
+  /*===============================*/
+  .savings-container{
+    background-color: white;
+    width: 100%;
+    height: 100px !important;
+  }
+
+  .savings-content{
+    height: 100px;
+    position: inherit;
+    top: 0;
+    transform: translateY(0);
+    /*background: linear-gradient(#ff9900 0%, #ff7600 100%);*/
+  }
+
+  #savings-h1{
+    font-size: 40px;
+    width: auto;
+    height: calc(100% + 3px);
+    margin-left: 0%;
+    padding-left: 5%;
+    background-color: white;
+    display: inline-block;
+  }
+
+  #price{
+    font-size: 47px;
+    padding-left: 200px;
+    margin-right: 100px;
+    float: right;
+    background: linear-gradient(#ff9900 0%, #ff7600 100%);
   }
 }
