@@ -11,6 +11,9 @@ Some of the things that i used in the project to make the layout responsive was.
 -Media queries for tablet/mobile/desktop
 -No bootstrap or other css frameworks were used.
 
-![alt]()
-![alt]()
-![alt]()
+Desktop && Large tablets depending on pixels and orientation.
+![alt](https://github.com/DaniVSainz/cruise-test/blob/master/Desk-.png)
+Standard mobile display
+![alt](https://github.com/DaniVSainz/cruise-test/blob/master/Mobile-landscape.png)
+Mobile landscape && Tablets
+![alt](https://github.com/DaniVSainz/cruise-test/blob/master/Mobile-portrait.png)
