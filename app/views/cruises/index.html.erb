@@ -94,7 +94,7 @@ if (screen.width > 480 && screen.width < 1025 ) {
   $('#ribbon3').appendTo('#box3');
   }
 
-   
+
 function addCommas(nStr)
 {
 	nStr += '';
@@ -115,7 +115,7 @@ $(".cell").on("click", "input:checkbox", function () {
 
   $items.each(function () {
       var $this = $(this);
-      var $target = $(".price");
+      var $target = $(this).parent().find('.price')
       var item_value = +($target.html().replace("$", "") || 0);
 
       cur_total += item_value;
